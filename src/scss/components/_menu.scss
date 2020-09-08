@@ -1,0 +1,38 @@
+.site__menu {
+    &--item {
+        position: relative;
+        height: 190px;
+        display: flex;
+        align-items: center;
+        h1 {
+            z-index: 2;
+            position: absolute;
+            color: #f15b4c;
+            font-weight: 900;
+            font-size: 150px;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: 0;
+            text-align:center ;
+        }
+        p {
+            width: 75%;
+            font-weight: 500;
+            position: relative;
+            z-index: 10;
+            color: #231f20;
+            font-size: 15px;
+            border-bottom: 1px solid #231f20;
+            padding-bottom: 4px;
+            text-transform: capitalize;
+            small {
+                position: absolute;
+                left: 0;
+                bottom: -40px;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+    }
+}

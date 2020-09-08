@@ -1,2 +1,15 @@
 .btn {
+    &.outlined__primary {
+        border: 1px solid #f15b4c;
+        font-weight: 600;
+        color: #f15b4c;
+        padding: 1.8em 4em;
+        text-transform: uppercase;
+        transition: all ease-in-out 0.4s;
+        display: inline-block;
+        &:hover {
+            background-color: #f15b4c;
+            color: #ffffff !important;
+        }
+    }
 }

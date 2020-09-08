@@ -1,0 +1,57 @@
+.site__footer {
+    padding: 30px 0;
+    border-top: 1px solid #e1e1e1;
+}
+
+.footer__widget {
+    h3 {
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+
+    &.footer__link__list {
+        ul {
+            li {
+                font-size: 15px;
+                line-height: 25px;
+                a {
+                    color: #231f20;
+                    &:hover{
+                        color: #f15b4c;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer__form {
+        input {
+            border: 1px solid #e1e1e1;
+            height: 40px;
+            margin-right: 5px;
+            padding: 4px 8px;
+            width: calc(90% - 100px);
+            font-size: 16px;
+            &:focus {
+                border-color: #f15b4c;
+            }
+        }
+        button {
+            border: 1px solid #f15b4c;
+            font-weight: 600;
+            color: #f15b4c;
+            height: 40px;
+            text-transform: uppercase;
+            transition: all ease-in-out 0.4s;
+            display: inline-block;
+            font-size: 15px;
+            background-color: transparent;
+            width: 90px;
+            &:hover {
+                background-color: #f15b4c;
+                color: #ffffff !important;
+            }
+        }
+    }
+}

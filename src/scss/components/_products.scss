@@ -1,0 +1,56 @@
+.site__product {
+    margin-bottom: 15px;
+    .product__thumbnail {
+        height: 280px;
+        background-image: url("https://via.placeholder.com/280x280");
+        background-size: cover;
+        background-position: center;
+        .product__hover {
+            font-size: 15px;
+            text-transform: uppercase;
+            display: flex;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transition: all ease-in-out 0.4s;
+            p {
+                position: relative;
+                z-index: 10;
+                margin: 0;
+                visibility: hidden;
+                opacity: 0;
+                top: 10px;
+                transition: all ease-in-out 0.4s;
+                a{
+                    color: #f15b4c;
+                }
+            }
+            .product__hover__cover {
+                z-index: 2;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                box-sizing: border-box;
+                border:1px solid transparent;
+                transition: all ease-in-out 0.4s;
+            }
+        }
+        &:hover {
+            .product__hover{
+                p {
+                    visibility: visible;
+                    top: 0;
+                    opacity: 1;
+                }
+                .product__hover__cover {
+                    background-color: rgba(255,255,255,0.3);
+                    border:1px solid #f15b4c;
+                }
+            }
+        }
+    }
+        
+}

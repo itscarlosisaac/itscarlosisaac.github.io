@@ -1,0 +1,41 @@
+.site__copyright {
+    background-color: #f9f9f9;
+    border-top: 1px solid #e1e1e1;
+    min-height: 68px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px 0;
+    p {
+        margin: 0;
+        color: #999596;
+
+        a {
+            color: #999596;
+        }
+
+        &.text__right {
+            text-align: right;
+            a {
+                &:hover{
+                    color: #f15b4c;
+                }
+                &:last-child {
+                    margin-left: 40px;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width:768px) {
+    .site__copyright {
+        p {
+            text-align: center;
+            &.text__right {
+                text-align: center;
+                margin-top: 20px;
+            }
+        }
+    }
+}
