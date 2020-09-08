@@ -1,0 +1,336 @@
+/* -----------------------------------------
+  00. ADD GOOGLE FONTS OR @FONTS HERE
+-------------------------------------------- */
+@import url("https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre:400,700|Roboto:300,400,500,700,900&display=swap");
+
+/* -----------------------------------------
+  01. BASE TYPOGRAPHY
+-------------------------------------------- */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+tr,
+td {
+  font-family: map-get($FONTS, "base");
+
+  @include antialias;
+}
+
+/* -----------------------------------------
+  01. BASE TYPOGRAPHY SIZES based from GridLover
+      Base Font Size: 14px
+      Base Line Height: 1.6
+      Scale Factor 1.701
+https://www.gridlover.net/try
+-------------------------------------------- */
+
+html,
+.root {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+input,
+div,
+span,
+applet,
+object,
+iframe,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+body,
+.article {
+  font-size: 1em;
+  line-height: 1.57142857em;
+}
+
+h1,
+.h1 {
+  font-size: 4.92857143em;
+  line-height: 1.27536232em;
+  margin-bottom: 0.63768116em;
+  margin-top: 0.31884058em;
+}
+
+h2,
+.h2 {
+  font-size: 2.92857143em;
+  line-height: 1.07317073em;
+  margin-bottom: 0.53658537em;
+  margin-top: 0.53658537em;
+}
+
+h3,
+.h3 {
+  font-size: 1.71428571em;
+  line-height: 1.83333333em;
+  margin-bottom: 0;
+  margin-top: 0.91666667em;
+}
+
+h4,
+.h4 {
+  font-size: 1em;
+  line-height: 1.57142857em;
+  margin-bottom: 0;
+  margin-top: 1.57142857em;
+}
+
+h5,
+.h5 {
+  font-size: 1em;
+  line-height: 1.57142857em;
+  margin-bottom: 0;
+  margin-top: 1.57142857em;
+}
+
+p,
+ul,
+ol,
+pre,
+table,
+blockquote {
+  margin-bottom: 1.57142857em;
+  margin-top: 0;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+/* Let's make sure all's aligned */
+hr,
+.hr {
+  border: 1px solid;
+  margin: -1px 0;
+}
+
+a,
+b,
+i,
+strong,
+em,
+small,
+code {
+  line-height: 0;
+}
+
+sub,
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* -----------------------------------------
+  03. BASE TYPOGRAPHY SIZE
+-------------------------------------------- */
+
+@include StyleComposer("text", $BREAKPOINTS, $FONT_SIZES, "font-size");
+
+
+/* -----------------------------------------
+  04. BASE TYPOGRAPHY WEIGHT
+-------------------------------------------- */
+.text-hairline {
+  font-weight: 100;
+}
+
+.text-thin {
+  font-weight: 200;
+}
+
+.text-light {
+  font-weight: 300;
+}
+
+.text-normal {
+  font-weight: 400;
+}
+
+.text-medium {
+  font-weight: 500;
+}
+
+.text-semibold {
+  font-weight: 600;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-extrabold {
+  font-weight: 800;
+}
+
+.text-black {
+  font-weight: 900;
+}
+
+/* -----------------------------------------
+  05. BASE TYPOGRAPHY TEXT ALIGNMENTS
+-------------------------------------------- */
+@include StyleComposer("text", $BREAKPOINTS, $ALIGNMENTS, "text-align");
+
+/* -----------------------------------------
+  06. BASE TYPOGRAPHY TEXT COLORS
+-------------------------------------------- */
+@include StyleComposer("text", $BREAKPOINTS, $COLORS, "color");
+
+/* -----------------------------------------
+  07. TEXT DECORATIONS
+-------------------------------------------- */
+.underline {
+  text-decoration: underline;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+/* -----------------------------------------
+  07. TEXT TRANSFORMATIONS
+-------------------------------------------- */
+.normal-case { text-transform: none; }
+.lowercase { text-transform: lowercase; }
+.uppercase { text-transform: uppercase; }
+.capitalize { text-transform: capitalize; }
+
+
+/* -----------------------------------------
+  08. TEXT LIST STULE
+-------------------------------------------- */
+.list-none { list-style-type: none; }
+.list-disc { list-style-type: disc; }
+.list-decimal { list-style-type: decimal; }
+
+/* -----------------------------------------
+  09. TEXT VERTICAL ALIGN
+-------------------------------------------- */
+.align-baseline { vertical-align: baseline; }
+.align-top { vertical-align: top; }
+.align-middle { vertical-align: middle; }
+.align-bottom { vertical-align: bottom; }
+.align-text-top { vertical-align: text-top; }
+.align-text-bottom { vertical-align: text-bottom; }
+
+/* -----------------------------------------
+  09. TEXT WHITE SPACE
+-------------------------------------------- */
+.whitespace-normal { white-space: normal; }
+.whitespace-no-wrap { white-space: nowrap; }
+.whitespace-pre { white-space: pre; }
+.whitespace-pre-line { white-space: pre-line; }
+.whitespace-pre-wrap { white-space: pre-wrap; }
+
+/* -----------------------------------------
+  10. BASE TYPOGRAPHY LINE HEIGHT
+-------------------------------------------- */
+@include StyleComposer("lh", $BREAKPOINTS, $DISTANCES, "line-height");
+
+/* -----------------------------------------
+  11. BASE TYPOGRAPHY LETTER SPACING
+-------------------------------------------- */
+@include StyleComposer("kerning", $BREAKPOINTS, $PX, "letter-spacing");
+
+/* -----------------------------------------
+  12. BASE TYPOGRAPHY VERTICAL ALLIGNMENT
+-------------------------------------------- */
+
+.vertical-bottom { vertical-align: bottom; }
+.vertical-baseline { vertical-align: baseline; }
+.vertical-middle { vertical-align: middle; }
+.vertical-super { vertical-align: top; }
+.vertical-sub { vertical-align: sub; }
+.vertical-text-top { vertical-align: text-top }
+.vertical-text-bottom { vertical-align: text-bottom }

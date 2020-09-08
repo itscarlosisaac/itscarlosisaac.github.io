@@ -1,0 +1,65 @@
+{
+  "extends": "stylelint-config-standard",
+  "plugins": [
+    "stylelint-order",
+    "stylelint-images",
+    "stylelint-declaration-use-variable"
+  ],
+  "rules": {
+    "function-linear-gradient-no-nonstandard-direction": null,
+    "selector-list-comma-newline-after": null,
+    "string-quotes": "double",
+    "no-duplicate-selectors": true,
+    "selector-combinator-space-after": null,
+    "selector-attribute-operator-space-before": "never",
+    "selector-attribute-operator-space-after": "never",
+    "selector-attribute-brackets-space-inside": "never",
+    "declaration-block-trailing-semicolon": "always",
+    "declaration-colon-space-before": "never",
+    "function-url-quotes": "always",
+    "font-family-name-quotes": "always-where-recommended",
+    "comment-whitespace-inside": "always",
+    "selector-pseudo-element-colon-notation": "double",
+    "selector-pseudo-class-parentheses-space-inside": "never",
+    "media-feature-range-operator-space-before": "never",
+    "media-feature-range-operator-space-after": "never",
+    "media-feature-parentheses-space-inside": "never",
+    "media-feature-colon-space-before": "never",
+    "media-feature-colon-space-after": null,
+    "no-descending-specificity": null,
+    "at-rule-no-unknown": null,
+    "block-no-empty": null,
+    "color-no-invalid-hex": true,
+    "comment-empty-line-before": [
+      "always",
+      {
+        "ignore": ["stylelint-commands", "after-comment"]
+      }
+    ],
+    "no-eol-whitespace": true,
+    "string-no-newline": true,
+    "declaration-colon-space-after": "always",
+    "indentation": 2,
+    "shorthand-property-no-redundant-values": true,
+    "max-empty-lines": 2,
+    "rule-empty-line-before": null,
+    "unit-whitelist": ["px", "em", "rem", "%", "deg", "s", "vh", "vw"],
+    "selector-attribute-quotes": "always",
+    "color-hex-case": "lower",
+    "color-named": "never",
+    "max-nesting-depth": 4,
+    "number-leading-zero": "always",
+    "property-case": "lower",
+    "color-hex-length": "long",
+    "selector-id-pattern": "#[a-z|A-Z|0-9|_|-]+",
+    "order/order": ["custom-properties", "declarations"],
+    "order/properties-alphabetical-order": true,
+    "images/broken": true,
+    "property-no-unknown": [
+      true,
+      {
+        "ignoreProperties": ["font-smoothing"]
+      }
+    ]
+  }
+}

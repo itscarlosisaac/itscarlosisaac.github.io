@@ -1,0 +1,17 @@
+block variables
+doctype html
+html(lang="en-us")
+    head
+        title=pageTitle
+
+        include ../_resources/meta
+        include ../_resources/styles
+
+    body
+        <!--[if lte IE 9]>
+        p(class="browserupgrade") You are using an #[strong outdated] browser. Please #[a(href="https://browsehappy.com") upgrade your browser] to improve your experience and security.
+        <![endif]-->
+
+        block content
+
+        include ../_resources/scripts

@@ -1,0 +1,54 @@
+/* -----------------------------------------
+  01. MIXING CSS COMPOSER
+-------------------------------------------- */
+
+@mixin StyleComposerHelper($bunch, $ruleContent, $className) {
+  .#{$className} {
+    @each $singleRule in $bunch {
+      #{$singleRule}: $ruleContent;
+    }
+  }
+}
+
+@mixin StyleComposer($prefix, $breakpoints, $list, $rules...) {
+  @each $name, $item in $list {
+    @each $breakpointPrefix, $breakpoint in $breakpoints {
+      @include for-size($breakpoint) {
+        @if $breakpointPrefix == "xs" {
+          @include StyleComposerHelper($rules, $item, #{$prefix}-#{$name} );
+        } @else {
+          @include StyleComposerHelper($rules, $item, #{$prefix}-#{$name}-#{$breakpointPrefix} );
+        }
+      }
+    }
+  }
+}
+
+/* -----------------------------------------
+  TRANSITION MIXIN
+-------------------------------------------- */
+@mixin TransitionComposer($args) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+/* -----------------------------------------
+  PSEUDO Selectors
+  hover, focus, selected
+-------------------------------------------- */
+@mixin PseudoComposer($prefix, $list, $rules, $selector) {
+  @each $name, $item in $list {
+    @include PseudoComposerHelper($rules, $item, #{$prefix}-#{$name}, $selector );
+  }
+}
+
+@mixin PseudoComposerHelper($bunch, $ruleContent, $className, $selector) {
+  .#{$className}:#{$selector} {
+    @each $singleRule in $bunch {
+      #{$singleRule}: $ruleContent;
+    }
+  }
+}

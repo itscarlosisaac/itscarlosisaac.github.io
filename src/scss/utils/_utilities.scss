@@ -1,0 +1,256 @@
+/* -----------------------------------------
+  00. ABREVIATIONS
+
+  py = Padding Y Axis - Top and Bottom
+  px = Padding X Axis - Left and Right
+  pt = Padding Top
+  pb = Padding Bottom
+  pl = Padding Left
+  pr = Padding Right
+  p = Padding in all directions
+
+
+  my = Margin Y Axis - Top and Bottom
+  mx = Margin X Axis - Left and Right
+  mt = Margin Top
+  mb = Margin Bottom
+  ml = Margin Left
+  mr = Margin Right
+  m = Margin in all directions
+
+  my-n = Negative Margin Y Axis - Top and Bottom
+  mx-n = Negative Margin X Axis - Left and Right
+  mt-n = Negative Margin Top
+  mb-n = Negative Margin Bottom
+  ml-n = Negative Margin Left
+  mr-n = Negative Margin Right
+  m-n = Negative Margin in all directions
+
+  bg = Background
+  rounded = Border Radius
+
+  bt = Border Top
+  bb = Border Bottom
+  bl = Border Left
+  br = Border Right
+
+  btlr = Border Top Left Radius
+  btrr = Border Top Right Radius
+  bblr = Border Bottom Left Radius
+  bbrr = Border Bottom Right Radius
+  blr = Border Top Bottom Left Radius
+  brr = Border To Bottom Right Radius
+  bbr = Border Bottom Radius
+  btr = Border Top Radius
+
+  h = Height
+  w = Width
+
+-------------------------------------------- */
+
+
+/* -----------------------------------------
+  01. PADDINGS
+-------------------------------------------- */
+@include StyleComposer("py", $BREAKPOINTS, $DISTANCES, "padding-top", "padding-bottom");
+@include StyleComposer("px", $BREAKPOINTS, $DISTANCES, "padding-left", "padding-right");
+@include StyleComposer("pt", $BREAKPOINTS, $DISTANCES, "padding-top");
+@include StyleComposer("pb", $BREAKPOINTS, $DISTANCES, "padding-bottom");
+@include StyleComposer("pl", $BREAKPOINTS, $DISTANCES, "padding-left");
+@include StyleComposer("pr", $BREAKPOINTS, $DISTANCES, "padding-right");
+@include StyleComposer("p", $BREAKPOINTS, $DISTANCES, "padding");
+
+/* -----------------------------------------
+  02. MARGINS
+-------------------------------------------- */
+@include StyleComposer("my", $BREAKPOINTS, $DISTANCES, "margin-top", "margin-bottom");
+@include StyleComposer("mx", $BREAKPOINTS, $DISTANCES, "margin-left", "margin-right");
+@include StyleComposer("mt", $BREAKPOINTS, $DISTANCES, "margin-top");
+@include StyleComposer("mb", $BREAKPOINTS, $DISTANCES, "margin-bottom");
+@include StyleComposer("ml", $BREAKPOINTS, $DISTANCES, "margin-left");
+@include StyleComposer("mr", $BREAKPOINTS, $DISTANCES, "margin-right");
+@include StyleComposer("m", $BREAKPOINTS, $DISTANCES, "margin");
+
+// NEGATIVES MARGINS
+
+@include StyleComposer("my-n", $BREAKPOINTS, $NEGATIVE_DISTANCES, "margin-top", "margin-bottom");
+@include StyleComposer("mx-n", $BREAKPOINTS, $NEGATIVE_DISTANCES, "margin-left", "margin-right");
+@include StyleComposer("mt-n", $BREAKPOINTS, $NEGATIVE_DISTANCES, "margin-top");
+@include StyleComposer("mb-n", $BREAKPOINTS, $NEGATIVE_DISTANCES, "margin-bottom");
+@include StyleComposer("ml-n", $BREAKPOINTS, $NEGATIVE_DISTANCES, "margin-left");
+@include StyleComposer("mr-n", $BREAKPOINTS, $NEGATIVE_DISTANCES, "margin-right");
+@include StyleComposer("m-n", $BREAKPOINTS, $NEGATIVE_DISTANCES, "margin");
+
+/* -----------------------------------------
+  03. BACKGROUND COLORS
+-------------------------------------------- */
+
+@include StyleComposer("bg", $BREAKPOINTS, $COLORS, "background-color");
+
+/* -----------------------------------------
+  04. BORDER RADIUS
+-------------------------------------------- */
+@include StyleComposer("rounded", $BREAKPOINTS, $DISTANCES, "border-radius");
+
+@include StyleComposer("btlr", $BREAKPOINTS, $DISTANCES, "border-top-left-radius");
+@include StyleComposer("btrr", $BREAKPOINTS, $DISTANCES, "border-top-right-radius");
+
+@include StyleComposer("bblr", $BREAKPOINTS, $DISTANCES, "border-bottom-left-radius");
+@include StyleComposer("bbrr", $BREAKPOINTS, $DISTANCES, "border-bottom-right-radius");
+
+@include StyleComposer("blr", $BREAKPOINTS, $DISTANCES, "border-bottom-left-radius", "border-top-left-radius");
+@include StyleComposer("brr", $BREAKPOINTS, $DISTANCES, "border-bottom-right-radius", "border-top-right-radius");
+
+@include StyleComposer("bbr", $BREAKPOINTS, $DISTANCES, "border-bottom-left-radius", "border-bottom-right-radius");
+@include StyleComposer("btr", $BREAKPOINTS, $DISTANCES, "border-top-left-radius", "border-top-right-radius");
+
+/* -----------------------------------------
+  05. BORDER
+    1. Border Color
+    2. Border Styles
+    3. Border Weight
+-------------------------------------------- */
+
+/* -----------------------------------------
+  1. Border Colors
+-------------------------------------------- */
+@include StyleComposer("border-color", $BREAKPOINTS, $COLORS, "border-color");
+@include StyleComposer("bt-color", $BREAKPOINTS, $COLORS, "border-top-color");
+@include StyleComposer("bb-color", $BREAKPOINTS, $COLORS, "border-bottom-color");
+@include StyleComposer("bl-color", $BREAKPOINTS, $COLORS, "border-left-color");
+@include StyleComposer("br-color", $BREAKPOINTS, $COLORS, "border-right-color");
+
+/* -----------------------------------------
+  2. Border Styles
+-------------------------------------------- */
+@include StyleComposer("border-style", $BREAKPOINTS, $BORDERS, "border-style");
+@include StyleComposer("bt-style", $BREAKPOINTS, $BORDERS, "border-top-style");
+@include StyleComposer("bb-style", $BREAKPOINTS, $BORDERS, "border-bottom-style");
+@include StyleComposer("bl-style", $BREAKPOINTS, $BORDERS, "border-left-style");
+@include StyleComposer("br-style", $BREAKPOINTS, $BORDERS, "border-right-style");
+
+/* -----------------------------------------
+  3. Border Weight
+-------------------------------------------- */
+
+@include StyleComposer("border-width", $BREAKPOINTS, $PX, "border-width");
+@include StyleComposer("bt-width", $BREAKPOINTS, $PX, "border-top-width");
+@include StyleComposer("bb-width", $BREAKPOINTS, $PX, "border-bottom-width");
+@include StyleComposer("bl-width", $BREAKPOINTS, $PX, "border-left-width");
+@include StyleComposer("br-width", $BREAKPOINTS, $PX, "border-right-width");
+
+/* -----------------------------------------
+  06. WIDTH AND HEIGHTS
+-------------------------------------------- */
+
+.w-100 { width: 100%; }
+.h-100 { height: 100%; }
+
+.w-auto { width: auto; }
+.h-auto { height: auto; }
+
+@include StyleComposer("h", $BREAKPOINTS, $DISTANCES, "height");
+@include StyleComposer("w", $BREAKPOINTS, $DISTANCES, "width");
+@include StyleComposer("max-h", $BREAKPOINTS, $DISTANCES, "max-height");
+@include StyleComposer("max-w", $BREAKPOINTS, $DISTANCES, "max-width");
+@include StyleComposer("min-h", $BREAKPOINTS, $DISTANCES, "min-height");
+@include StyleComposer("min-w", $BREAKPOINTS, $DISTANCES, "min-width");
+
+/* -----------------------------------------
+  07. DISPLAY
+-------------------------------------------- */
+.flex { display: flex; }
+.inline { display: inline; }
+.block { display: block; }
+.inline-block { display: inline-block; }
+.inline-flex { display: inline-flex; }
+.table { display: table; }
+.initial { display: initial; }
+.inherit { display: inherit; }
+
+/* -----------------------------------------
+  08. FLEX CLASSES
+-------------------------------------------- */
+.justify-center { justify-content: center; }
+.justify-end { justify-content: flex-end; }
+.justify-start { justify-content: flex-start; }
+.justify-between { justify-content: space-between; }
+.justify-evenly { justify-content: space-evenly; }
+.justify-around { justify-content: space-around; }
+
+.align-center { align-items: center; }
+.align-end { align-items: flex-end; }
+.align-start { align-items: flex-start; }
+.align-baseline { align-items: baseline; }
+.align-stretch { align-items: stretch; }
+
+/* -----------------------------------------
+  08. FLEX ORDER
+-------------------------------------------- */
+@include StyleComposer("order", $BREAKPOINTS, $ORDERS, "order");
+
+/* -----------------------------------------
+  09. PESUDO SELECTORS - HOVER BACKGROUND AND COLORS
+-------------------------------------------- */
+@include PseudoComposer("bg-hover", $COLORS, "background-color", "hover" );
+@include PseudoComposer("text-hover", $COLORS, "color", "hover" );
+@include PseudoComposer("br-hover", $COLORS, "border-color", "hover" );
+
+/* -----------------------------------------
+  09. PESUDO SELECTORS - FOCUS BACKGROUND AND COLORS
+-------------------------------------------- */
+@include PseudoComposer("bg-focus", $COLORS, "background-color", "focus" );
+@include PseudoComposer("text-focus", $COLORS, "color", "focus" );
+@include PseudoComposer("br-focus", $COLORS, "border-color", "focus" );
+
+/* -----------------------------------------
+  10. SHADOWS
+-------------------------------------------- */
+.shadow-xs { box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05); }
+.shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+.shadow { box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); }
+.shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+.shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+.shadow-xl { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+.shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+.shadow-inner { box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); }
+.shadow-outline { box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5); }
+.shadow-none { box-shadow: none; }
+
+/* -----------------------------------------
+  10. FORM UTILITIES
+-------------------------------------------- */
+
+.no-resize { resize: none; }
+
+/* -----------------------------------------
+  11. POSITION UTILITIES
+-------------------------------------------- */
+
+.relative { position: relative; }
+.absolute { position: absolute; }
+
+/* -----------------------------------------
+  11. Z INDEX UTILITIES
+-------------------------------------------- */
+
+@for $i from 1 through 20 {
+  $value: $i * 100;
+  .z-#{$value} { z-index: $value; }
+}
+
+/* -----------------------------------------
+  12.  OPACITY UTILITIES
+-------------------------------------------- */
+
+@for $i from 1 through 10 {
+  $value: $i * 0.1;
+  .opacity-#{$i} { opacity: $value; }
+}
+
+
+/* -----------------------------------------
+  13.  FONT FAMILIES
+-------------------------------------------- */
+
+@include StyleComposer("font", $BREAKPOINTS, $FONTS, "font-family");

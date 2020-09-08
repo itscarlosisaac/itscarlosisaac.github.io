@@ -1,0 +1,133 @@
+/* -----------------------------------------
+  00. MIXINS AND HELPER FUNCTIONS
+-------------------------------------------- */
+/* stylelint-disable */
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+/* To reduce the amount of code to create pseudo elements
+div::after {
+  @include pseudo;
+  top: -1rem; left: -1rem;
+  width: 1rem; height: 1rem;
+}
+*/
+
+@mixin responsive-ratio($x, $y, $pseudo: false) {
+  $padding: unquote(($y / $x) * 100 + "%");
+  @if $pseudo {
+    &:before {
+      padding-top: $padding;
+      width: 100%;
+      @include pseudo($pos: relative);
+    }
+  } @else {
+    padding-top: $padding;
+  }
+}
+
+/* To use this for creating scalable elements (usually images / background images) that maintain a ratio.
+div {
+    @include responsive-ratio(16,9);
+}
+*/
+
+@mixin gradient($direction, $colorList) {
+  background: -webkit-linear-gradient($direction, $colorList);
+  background: -moz-linear-gradient($direction, $colorList);
+  background: -o-linear-gradient($direction, $colorList);
+  background: linear-gradient($direction, $colorList);
+}
+/* To use this for creating Linear Gradient between colors
+div {
+     @include gradient(left,  blue 0%, white 50%, red 100%);
+}
+*/
+
+
+@mixin input-placeholder {
+  &.placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+/* Input placeholder color and font styles
+input,
+textarea {
+  @include input-placeholder {
+    color: $grey;
+    font-size: 12px;
+  }
+}
+*/
+
+@mixin cf {
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+/* Contain float / clearfix
+div {
+  @include cf;
+}
+*/
+
+@mixin antialias {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+}
+
+/* Fix font antialiased
+div {
+  @include antialias;
+}
+*/
+
+@mixin appearance($val: none) {
+  -webkit-appearance: $val;
+  -moz-appearance: $val;
+  appearance: $val;
+}
+
+/* To remove or change webkit appearence property on mobile devices
+div {
+  @include appearance;
+}
+*/
+
+@mixin for-size($size) {
+
+  @if  $size == map-get($BREAKPOINTS, "xs"){
+    @content;
+  } @else if $size == map-get($BREAKPOINTS, "sm") {
+    @media all and (min-width: map-get($BREAKPOINTS, "sm") ) { @content; }
+
+  } @else if $size == map-get($BREAKPOINTS, "md") {
+    @media all and (min-width: map-get($BREAKPOINTS, "md")) { @content; }
+
+  } @else if $size == map-get($BREAKPOINTS, "lg") {
+    @media all and (min-width: map-get($BREAKPOINTS, "lg")) { @content; }
+
+  } @else if $size ==  map-get($BREAKPOINTS, "xl") {
+    @media all and (min-width:  map-get($BREAKPOINTS, "xl")) { @content; }
+  } 
+}
