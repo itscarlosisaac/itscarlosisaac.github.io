@@ -270,7 +270,7 @@ exports.build = series(
     Images,
     JSDependencies,
     JavaScript,
-    Utilities
+    // Utilities
   )
 );
 exports.deploy = series(
@@ -283,6 +283,6 @@ exports.deploy = series(
     Images,
     JSDependencies,
     JavaScript,
-    Utilities
+    // Utilities
   )
 );
