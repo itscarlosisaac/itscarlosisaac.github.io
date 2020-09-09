@@ -1,0 +1,32 @@
+.navContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto 0;
+    div {
+        margin: 5px;
+        background-color: #fff;
+        height: 20px;
+        width: 20px;
+        border-radius: 100px;
+        cursor: pointer;
+        &.tns-nav-active{
+            background-color: #f15b4c;
+        }
+
+    }
+ }
+
+ .bg-coconout {
+     background-image: url("../images/coconout.jpg"), url('../images/bg-blue-stripe.jpg');
+     background-size: initial, contain;
+     background-position: bottom right;
+     background-repeat: no-repeat, repeat-x;
+ }
+
+ .bg-juice {
+    background-image: url("../images/juice.jpg");
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repea;
+}

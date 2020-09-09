@@ -1,6 +1,16 @@
 .site__hero {
     padding: 10em 0;
-    background-color: gray;
+    position: relative;
+    background-color: #39c2d2;
+    .hero-image {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        img{
+            width: 100%;
+            vertical-align: middle;
+        }
+    }
     h1 {
         margin-bottom: 48px;
         font-size: 50px;
@@ -10,4 +20,32 @@
         margin-bottom: 36px;
         max-width: 360px;
     }
+}
+
+
+@media all and (min-width:992px ) {
+    .site__hero {
+        padding: 10em 0;
+        position: relative;
+        background-color: #39c2d2;
+        .hero-image {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: auto;
+            img{
+                max-width: 100%;
+                vertical-align: middle;
+            }
+        }
+        h1 {
+            margin-bottom: 48px;
+            font-size: 50px;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 36px;
+            max-width: 360px;
+        }
+    }    
 }
